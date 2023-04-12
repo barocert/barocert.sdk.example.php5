@@ -12,7 +12,7 @@
         <legend>Kakaocert 본인인증 API</legend>
         <ul>
             <li><a href="KakaocertService/requestIdentity.php">RequestIdentity</a> - 본인인증 요청</li>
-            <li><a href="KakaocertService/getIdentityStatus.php">getIdentityStatus</a> - 본인인증 상태확인</li>
+            <li><a href="KakaocertService/getIdentityStatus.php">GetIdentityStatus</a> - 본인인증 상태확인</li>
             <li><a href="KakaocertService/verifyIdentity.php">VerifyIdentity</a> - 본인인증 검증</li>
         </ul>
     </fieldset>
