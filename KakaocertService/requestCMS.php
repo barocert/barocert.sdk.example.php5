@@ -16,43 +16,43 @@
   $clientCode = '023030000004';
 
   // 출금동의 요청 정보 객체
-  $RequestCMS = new RequestCMS();
+  $KakaoCMS = new KakaoCMS();
 
   // 수신자 정보
   // 휴대폰번호,성명,생년월일 또는 Ci(연계정보)값 중 택 일
-  $RequestCMS->receiverHP = $KakaocertService->encrypt('01054437896');
-  $RequestCMS->receiverName = $KakaocertService->encrypt('최상혁');
-  $RequestCMS->receiverBirthday = $KakaocertService->encrypt('19880301');
-  // $RequestCMS->ci = KakaocertService::encrypt('');;
+  $KakaoCMS->receiverHP = $KakaocertService->encrypt('01054437896');
+  $KakaoCMS->receiverName = $KakaocertService->encrypt('최상혁');
+  $KakaoCMS->receiverBirthday = $KakaocertService->encrypt('19880301');
+  // $KakaoCMS->ci = KakaocertService::encrypt('');;
 
   // 인증요청 메시지 제목 - 최대 40자
-  $RequestCMS->reqTitle = '인증요청 메시지 제공란';
+  $KakaoCMS->reqTitle = '인증요청 메시지 제공란';
   // 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
-  $RequestCMS->expireIn = 1000;
+  $KakaoCMS->expireIn = 1000;
   // 청구기관명 - 최대 100자
-  $RequestCMS->requestCorp = $KakaocertService->encrypt('청구 기관명란');
+  $KakaoCMS->requestCorp = $KakaocertService->encrypt('청구 기관명란');
   // 출금은행명 - 최대 100자
-  $RequestCMS->bankName = $KakaocertService->encrypt('출금은행명란');
+  $KakaoCMS->bankName = $KakaocertService->encrypt('출금은행명란');
   // 출금계좌번호 - 최대 32자
-  $RequestCMS->bankAccountNum = $KakaocertService->encrypt('9-4324-5117-58');
+  $KakaoCMS->bankAccountNum = $KakaocertService->encrypt('9-4324-5117-58');
   // 출금계좌 예금주명 - 최대 100자
-  $RequestCMS->bankAccountName = $KakaocertService->encrypt('예금주명 입력란');
+  $KakaoCMS->bankAccountName = $KakaocertService->encrypt('예금주명 입력란');
   // 출금계좌 예금주 생년월일 - 8자
-  $RequestCMS->bankAccountBirthday = $KakaocertService->encrypt('19880301');
+  $KakaoCMS->bankAccountBirthday = $KakaocertService->encrypt('19880301');
   // 출금유형
   // CMS - 출금동의용, FIRM - 펌뱅킹, GIRO - 지로용
-  $RequestCMS->bankServiceType = $KakaocertService->encrypt('CMS'); // CMS, FIRM, GIRO
+  $KakaoCMS->bankServiceType = $KakaocertService->encrypt('CMS'); // CMS, FIRM, GIRO
 
   // AppToApp 인증요청 여부
   // true - AppToApp 인증방식, false - Talk Message 인증방식
-  $RequestCMS->appUseYN = false; 
+  $KakaoCMS->appUseYN = false; 
 
   // App to App 방식 이용시, 에러시 호출할 URL
-  // $RequestCMS->returnURL = 'https://kakao.barocert.com';
+  // $KakaoCMS->returnURL = 'https://kakao.barocert.com';
 
 
   try {
-    $result = $KakaocertService->requestCMS($clientCode, $RequestCMS);
+    $result = $KakaocertService->requestCMS($clientCode, $KakaoCMS);
   }
   catch(BarocertException $pe) {
     $code = $pe->getCode();

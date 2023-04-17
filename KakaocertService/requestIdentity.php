@@ -17,32 +17,32 @@
   $clientCode = '023030000004';
 
   // 본인인증 요청정보 객체
-  $RequestIdentity = new RequestIdentity();
+  $KakaoIdentity = new KakaoIdentity();
 
   // 수신자 정보
   // 휴대폰번호,성명,생년월일 또는 Ci(연계정보)값 중 택 일
-  $RequestIdentity->receiverHP = $KakaocertService->encrypt('01054437896');
-  $RequestIdentity->receiverName = $KakaocertService->encrypt('최상혁');
-  $RequestIdentity->receiverBirthday = $KakaocertService->encrypt('19880301');
-  // $RequestIdentity->ci = $KakaocertService->encrypt('');
+  $KakaoIdentity->receiverHP = $KakaocertService->encrypt('01054437896');
+  $KakaoIdentity->receiverName = $KakaocertService->encrypt('최상혁');
+  $KakaoIdentity->receiverBirthday = $KakaocertService->encrypt('19880301');
+  // $KakaoIdentity->ci = $KakaocertService->encrypt('');
   
   // 인증요청 메시지 제목 - 최대 40자
-  $RequestIdentity->reqTitle = '인증요청 메시지 제목란';
+  $KakaoIdentity->reqTitle = '인증요청 메시지 제목란';
   // 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
-  $RequestIdentity->expireIn = 1000;
+  $KakaoIdentity->expireIn = 1000;
   // 서명 원문 - 최대 2,800자 까지 입력가능
-  $RequestIdentity->token = $KakaocertService->encrypt('본인인증요청토큰');
+  $KakaoIdentity->token = $KakaocertService->encrypt('본인인증요청토큰');
 
 
   // AppToApp 인증요청 여부
   // true - AppToApp 인증방식, false - Talk Message 인증방식
-  $RequestIdentity->appUseYN = false;
+  $KakaoIdentity->appUseYN = false;
 
   // App to App 방식 이용시, 에러시 호출할 URL
-  // $RequestIdentity->returnURL = 'https://kakao.barocert.com';
+  // $KakaoIdentity->returnURL = 'https://kakao.barocert.com';
 
   try {
-    $result = $KakaocertService->requestIdentity($clientCode, $RequestIdentity);
+    $result = $KakaocertService->requestIdentity($clientCode, $KakaoIdentity);
   }
   catch(BarocertException $pe) {
     $code = $pe->getCode();

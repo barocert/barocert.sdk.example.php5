@@ -16,34 +16,34 @@
   $clientCode = '023030000004';
 
   // 전자서명 요청정보 객체
-  $RequestSign = new RequestSign();
+  $KakaoSign = new KakaoSign();
 
   // 수신자 정보
   // 휴대폰번호,성명,생년월일 또는 Ci(연계정보)값 중 택 일
-  $RequestSign->receiverHP = $KakaocertService->encrypt('01054437896');
-  $RequestSign->receiverName = $KakaocertService->encrypt('최상혁');
-  $RequestSign->receiverBirthday = $KakaocertService->encrypt('19880301');
-  // $RequestSign->ci = $KakaocertService->encrypt('');
+  $KakaoSign->receiverHP = $KakaocertService->encrypt('01054437896');
+  $KakaoSign->receiverName = $KakaocertService->encrypt('최상혁');
+  $KakaoSign->receiverBirthday = $KakaocertService->encrypt('19880301');
+  // $KakaoSign->ci = $KakaocertService->encrypt('');
 
   // 인증요청 메시지 제목 - 최대 40자
-  $RequestSign->reqTitle = '전자서명단건테스트';
+  $KakaoSign->reqTitle = '전자서명단건테스트';
   // 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
-  $RequestSign->expireIn = 1000;
+  $KakaoSign->expireIn = 1000;
   // 서명 원문 - 원문 2,800자 까지 입력가능
-  $RequestSign->token = $KakaocertService->encrypt('전자서명단건테스트데이터');
+  $KakaoSign->token = $KakaocertService->encrypt('전자서명단건테스트데이터');
   // 서명 원문 유형
   // TEXT - 일반 텍스트, HASH - HASH 데이터
-  $RequestSign->tokenType = 'TEXT'; // TEXT, HASH
+  $KakaoSign->tokenType = 'TEXT'; // TEXT, HASH
 
   // AppToApp 인증요청 여부
   // true - AppToApp 인증방식, false - Talk Message 인증방식
-  $RequestSign->appUseYN = false;
+  $KakaoSign->appUseYN = false;
 
   // App to App 방식 이용시, 에러시 호출할 URL
-  // $RequestSign->returnURL = 'https://kakao.barocert.com';
+  // $KakaoSign->returnURL = 'https://kakao.barocert.com';
 
   try {
-    $result = $KakaocertService->requestSign($clientCode, $RequestSign);
+    $result = $KakaocertService->requestSign($clientCode, $KakaoSign);
   }
   catch(BarocertException $pe) {
     $code = $pe->getCode();

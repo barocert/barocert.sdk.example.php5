@@ -16,49 +16,49 @@
   $clientCode = '023030000004';
 
   // 전자서명 요청정보 객체
-  $RequestMultiSign = new RequestMultiSign();
+  $KakaoMultiSign = new KakaoMultiSign();
 
   // 수신자 정보
   // 휴대폰번호,성명,생년월일 또는 Ci(연계정보)값 중 택 일
-  $RequestMultiSign->receiverHP = $KakaocertService->encrypt('01054437896');
-  $RequestMultiSign->receiverName = $KakaocertService->encrypt('최상혁');
-  $RequestMultiSign->receiverBirthday = $KakaocertService->encrypt('19880301');
-  // $RequestMultiSign->ci = $KakaocertService->encrypt('');
+  $KakaoMultiSign->receiverHP = $KakaocertService->encrypt('01054437896');
+  $KakaoMultiSign->receiverName = $KakaocertService->encrypt('최상혁');
+  $KakaoMultiSign->receiverBirthday = $KakaocertService->encrypt('19880301');
+  // $KakaoMultiSign->ci = $KakaocertService->encrypt('');
 
     // 인증요청 메시지 제목 - 최대 40자
-  $RequestMultiSign->reqTitle = '전자서명단건테스트';
+  $KakaoMultiSign->reqTitle = '전자서명단건테스트';
   // 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
-  $RequestMultiSign->expireIn = 1000;
+  $KakaoMultiSign->expireIn = 1000;
 
   // 개별문서 등록 - 최대 20 건
   // 개별 요청 정보 객체
-  $RequestMultiSign->tokens = array();
+  $KakaoMultiSign->tokens = array();
   
-  $RequestMultiSign->tokens[] = new MultiSignTokens();
+  $KakaoMultiSign->tokens[] = new KakaoMultiSignTokens();
   // 인증요청 메시지 제목 - 최대 40자
-  $RequestMultiSign->tokens[0]->reqTitle = "전자서명복수문서테스트1";
+  $KakaoMultiSign->tokens[0]->reqTitle = "전자서명복수문서테스트1";
   // 서명 원문 - 원문 2,800자 까지 입력가능
-  $RequestMultiSign->tokens[0]->token = $KakaocertService->encrypt("전자서명복수테스트데이터1");
+  $KakaoMultiSign->tokens[0]->token = $KakaocertService->encrypt("전자서명복수테스트데이터1");
 
-  $RequestMultiSign->tokens[] = new MultiSignTokens();
+  $KakaoMultiSign->tokens[] = new KakaoMultiSignTokens();
   // 인증요청 메시지 제목 - 최대 40자
-  $RequestMultiSign->tokens[1]->reqTitle = "전자서명복수문서테스트2";
+  $KakaoMultiSign->tokens[1]->reqTitle = "전자서명복수문서테스트2";
   // 서명 원문 - 원문 2,800자 까지 입력가능
-  $RequestMultiSign->tokens[1]->token = $KakaocertService->encrypt("전자서명복수테스트데이터2");
+  $KakaoMultiSign->tokens[1]->token = $KakaocertService->encrypt("전자서명복수테스트데이터2");
 
   // 서명 원문 유형
   // TEXT - 일반 텍스트, HASH - HASH 데이터
-  $RequestMultiSign->tokenType = 'TEXT'; // TEXT, HASH
+  $KakaoMultiSign->tokenType = 'TEXT'; // TEXT, HASH
 
   // AppToApp 인증요청 여부
   // true - AppToApp 인증방식, false - Talk Message 인증방식
-  $RequestMultiSign->appUseYN = false;
+  $KakaoMultiSign->appUseYN = false;
 
   // App to App 방식 이용시, 에러시 호출할 URL
-  // $RequestMultiSign->returnURL = 'https://kakao.barocert.com';
+  // $KakaoMultiSign->returnURL = 'https://kakao.barocert.com';
 
   try {
-    $result = $KakaocertService->requestMultiSign($clientCode, $RequestMultiSign);
+    $result = $KakaocertService->requestMultiSign($clientCode, $KakaoMultiSign);
   }
   catch(BarocertException $pe) {
     $code = $pe->getCode();
