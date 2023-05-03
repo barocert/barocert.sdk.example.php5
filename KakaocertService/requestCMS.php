@@ -20,9 +20,9 @@
 
   // 수신자 정보
   // 휴대폰번호,성명,생년월일 또는 Ci(연계정보)값 중 택 일
-  $KakaoCMS->receiverHP = $KakaocertService->encrypt('01054437896');
-  $KakaoCMS->receiverName = $KakaocertService->encrypt('최상혁');
-  $KakaoCMS->receiverBirthday = $KakaocertService->encrypt('19880301');
+  $KakaoCMS->receiverHP = $KakaocertService->encrypt('01012341234');
+  $KakaoCMS->receiverName = $KakaocertService->encrypt('홍길동');
+  $KakaoCMS->receiverBirthday = $KakaocertService->encrypt('19700101');
   // $KakaoCMS->ci = KakaocertService::encrypt('');;
 
   // 인증요청 메시지 제목 - 최대 40자
@@ -38,7 +38,7 @@
   // 출금계좌 예금주명 - 최대 100자
   $KakaoCMS->bankAccountName = $KakaocertService->encrypt('예금주명 입력란');
   // 출금계좌 예금주 생년월일 - 8자
-  $KakaoCMS->bankAccountBirthday = $KakaocertService->encrypt('19880301');
+  $KakaoCMS->bankAccountBirthday = $KakaocertService->encrypt('19700101');
   // 출금유형
   // CMS - 출금동의용, FIRM - 펌뱅킹, GIRO - 지로용
   $KakaoCMS->bankServiceType = $KakaocertService->encrypt('CMS'); // CMS, FIRM, GIRO

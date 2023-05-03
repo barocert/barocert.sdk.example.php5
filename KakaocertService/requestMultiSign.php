@@ -20,9 +20,9 @@
 
   // 수신자 정보
   // 휴대폰번호,성명,생년월일 또는 Ci(연계정보)값 중 택 일
-  $KakaoMultiSign->receiverHP = $KakaocertService->encrypt('01054437896');
-  $KakaoMultiSign->receiverName = $KakaocertService->encrypt('최상혁');
-  $KakaoMultiSign->receiverBirthday = $KakaocertService->encrypt('19880301');
+  $KakaoMultiSign->receiverHP = $KakaocertService->encrypt('01012341234');
+  $KakaoMultiSign->receiverName = $KakaocertService->encrypt('홍길동');
+  $KakaoMultiSign->receiverBirthday = $KakaocertService->encrypt('19700101');
   // $KakaoMultiSign->ci = $KakaocertService->encrypt('');
 
     // 인증요청 메시지 제목 - 최대 40자
