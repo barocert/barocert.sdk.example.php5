@@ -2,7 +2,7 @@
   /**
   * Kakaocert API PHP SDK Example
   *
-  * 업데이트 일자 : 2023-04-12
+  * 업데이트 일자 : 2023-05-03
   * 연동기술지원 연락처 : 1600-9854
   * 연동기술지원 이메일 : dev@linkhubcorp.com
   *
@@ -11,10 +11,10 @@
     require_once '../Barocert/Kakaocert.php';
 
     // 링크아이디
-    $LinkID = 'LINKHUB_BC';
+    $LinkID = 'TESTER';
 
     // 비밀키
-    $SecretKey = 'npCAl0sHPpJqlvMbrcBmNagrxkQ74w9Sl0A+M++kMCE=';
+    $SecretKey = 'SwWxqU+0TErBXy/9TVjIPEnI0VTUMMSQZtJf3Ed8q3I=';
 
     // 통신방식 기본은 CURL , curl 사용에 문제가 있을경우 STREAM 사용가능.
     // STREAM 사용시에는 php.ini의 allow_url_fopen = on 으로 설정해야함.
