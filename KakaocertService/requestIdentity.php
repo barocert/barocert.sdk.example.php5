@@ -19,12 +19,12 @@
   // 본인인증 요청정보 객체
   $KakaoIdentity = new KakaoIdentity();
 
-  // 수신자 정보
-  // 휴대폰번호,성명,생년월일 또는 Ci(연계정보)값 중 택 일
+  // 수신자 휴대폰번호 - 11자 (하이픈 제외)
   $KakaoIdentity->receiverHP = $KakaocertService->encrypt('01012341234');
+  // 수신자 성명 - 80자
   $KakaoIdentity->receiverName = $KakaocertService->encrypt('홍길동');
+  // 수신자 생년월일 - 8자 (yyyyMMdd)
   $KakaoIdentity->receiverBirthday = $KakaocertService->encrypt('19700101');
-  // $KakaoIdentity->ci = $KakaocertService->encrypt('');
   
   // 인증요청 메시지 제목 - 최대 40자
   $KakaoIdentity->reqTitle = '인증요청 메시지 제목란';

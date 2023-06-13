@@ -18,12 +18,12 @@
   // 전자서명 요청정보 객체
   $KakaoSign = new KakaoSign();
 
-  // 수신자 정보
-  // 휴대폰번호,성명,생년월일 또는 Ci(연계정보)값 중 택 일
+  // 수신자 휴대폰번호 - 11자 (하이픈 제외)
   $KakaoSign->receiverHP = $KakaocertService->encrypt('01012341234');
+  // 수신자 성명 - 80자
   $KakaoSign->receiverName = $KakaocertService->encrypt('홍길동');
+  // 수신자 생년월일 - 8자 (yyyyMMdd)
   $KakaoSign->receiverBirthday = $KakaocertService->encrypt('19700101');
-  // $KakaoSign->ci = $KakaocertService->encrypt('');
 
   // 인증요청 메시지 제목 - 최대 40자
   $KakaoSign->reqTitle = '전자서명단건테스트';
