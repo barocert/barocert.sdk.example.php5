@@ -7,9 +7,9 @@
 <?php
 
   /*
-  * 카카오톡 사용자에게 본인인증 전자서명을 요청합니다.
-  * - 
-  */
+   * 카카오톡 사용자에게 본인인증 전자서명을 요청합니다.
+   * https://developers.barocert.com/reference/kakao/java/identity/api#RequestIdentity
+   */
 
   include 'common.php';
 

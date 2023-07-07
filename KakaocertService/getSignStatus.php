@@ -7,8 +7,9 @@
 <?php
 
   /*
-  * 전자서명 요청에 대한 서명 상태를 확인합니다.
-  */
+   * 전자서명 요청에 대한 서명 상태를 확인합니다.
+   * https://developers.barocert.com/reference/kakao/java/sign/api-single#GetSignStatus
+   */
 
   include 'common.php';
 

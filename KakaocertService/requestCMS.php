@@ -7,8 +7,9 @@
 <?php
 
   /*
-  * 카카오톡 사용자에게 출금동의 전자서명을 요청합니다.
-  */
+   * 카카오톡 사용자에게 출금동의 전자서명을 요청합니다.
+   * https://developers.barocert.com/reference/kakao/java/cms/api#RequestCMS
+   */
 
   include 'common.php';
 

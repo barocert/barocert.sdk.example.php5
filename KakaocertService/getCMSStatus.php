@@ -6,8 +6,9 @@
     </head>
 <?php
   /*
-  * 카카오 출금동의 요청시 반환된 접수아이디를 통해 서명 상태를 확인합니다.
-  */
+   * 카카오 출금동의 요청시 반환된 접수아이디를 통해 서명 상태를 확인합니다.
+   * https://developers.barocert.com/reference/kakao/java/cms/api#GetCMSStatus
+   */
 
   include 'common.php';
 

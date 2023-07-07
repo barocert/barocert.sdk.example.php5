@@ -7,8 +7,9 @@
 <?php
 
   /*
-  * 전자서명 요청시 반환된 접수아이디를 통해 서명 상태를 확인합니다. (복수)
-  */
+   * 전자서명 요청시 반환된 접수아이디를 통해 서명 상태를 확인합니다. (복수)
+   * https://developers.barocert.com/reference/kakao/java/sign/api-multi#GetMultiSignStatus
+   */
 
   include 'common.php';
 
