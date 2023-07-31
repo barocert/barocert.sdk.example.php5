@@ -37,6 +37,50 @@
             <li><a href="KakaocertService/verifyCMS.php">VerifyCMS</a> - 출금동의 검증</li>
         </ul>
     </fieldset>
+
+    <fieldset class="fieldset1">
+        <legend>Kakaocert 간편로그인 API</legend>
+        <ul>
+            <li><a href="KakaocertService/verifyLogin.php">VerifyLogin</a> - 간편로그인 검증</li>
+        </ul>
+    </fieldset>
+   
+    <br/>
+    <fieldset class="fieldset1">
+        <legend>Passcert 본인인증 API</legend>
+        <ul>
+            <li><a href="PasscertService/requestIdentity.php">RequestIdentity</a> - 본인인증 요청</li>
+            <li><a href="PasscertService/getIdentityStatus.php">GetIdentityStatus</a> - 본인인증 상태확인</li>
+            <li><a href="PasscertService/verifyIdentity.php">VerifyIdentity</a> - 본인인증 검증</li>
+        </ul>
+    </fieldset>
+    
+    <fieldset class="fieldset1">
+        <legend>Passcert 전자서명 API</legend>
+        <ul>
+            <li><a href="PasscertService/requestSign.php">RequestSign</a> - 전자서명 요청</li>
+            <li><a href="PasscertService/getSignStatus.php">GetSignStatus</a> - 전자서명 상태확인</li>
+            <li><a href="PasscertService/verifySign.php">VerifySign</a> - 전자서명 검증</li>
+        </ul>
+    </fieldset>
+
+    <fieldset class="fieldset1">
+        <legend>Passcert 출금동의 API</legend>
+        <ul>
+            <li><a href="PasscertService/requestCMS.php">RequestCMS</a> - 출금동의 요청</li>
+            <li><a href="PasscertService/getCMSStatus.php">GetCMSStatus</a> - 출금동의 상태확인</li>
+            <li><a href="PasscertService/verifyCMS.php">VerifyCMS</a> - 출금동의 검증</li>
+        </ul>
+    </fieldset>
+
+    <fieldset class="fieldset1">
+        <legend>Passcert 간편로그인 API</legend>
+        <ul>
+            <li><a href="PasscertService/requestLogin.php">RequestLogin</a> - 간편로그인 요청</li>
+            <li><a href="PasscertService/getLoginStatus.php">GetLoginStatus</a> - 간편로그인 상태확인</li>
+            <li><a href="PasscertService/verifyLogin.php">VerifyLogin</a> - 간편로그인 검증</li>
+        </ul>
+    </fieldset>
 </div>
 </body>
 </html>
