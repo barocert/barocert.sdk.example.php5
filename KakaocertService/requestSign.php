@@ -7,13 +7,13 @@
 <?php
 
   /*
-   * 카카오톡 사용자에게 전자서명을 요청합니다.(단건)
-   * https://developers.barocert.com/reference/kakao/java/sign/api-single#RequestSign
+   * 카카오톡 이용자에게 단건(1건) 문서의 전자서명을 요청합니다.
+   * https://developers.barocert.com/reference/kakao/php/sign/api-single#RequestSign
    */
 
   include 'common.php';
 
-  // 이용기관코드, 파트너가 등록한 이용기관의 코드, (파트너 사이트에서 확인가능)
+  // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
   $clientCode = '023030000004';
 
   // 전자서명 요청정보 객체
@@ -40,7 +40,7 @@
   // true - AppToApp 인증방식, false - Talk Message 인증방식
   $KakaoSign->appUseYN = false;
 
-  // App to App 방식 이용시, 에러시 호출할 URL
+  // App to App 방식 이용시, 호출할 URL
   // $KakaoSign->returnURL = 'https://kakao.barocert.com';
 
   try {
@@ -56,7 +56,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>전자서명 요청(단건)</legend>
+                <legend>카카오 전자서명 요청(단건)</legend>
                 <ul>
 
                 <?php

@@ -5,28 +5,28 @@
         <title>Barocert Pass Service PHP 5.X Example.</title>
     </head>
 <?php
- /*
-  * 간편로그인 요청 후 반환받은 접수아이디로 진행 상태를 확인합니다.
-  * 상태확인 함수는 간편로그인 요청 함수를 호출한 당일 23시 59분 59초까지만 호출 가능합니다.
-  * 간편로그인 요청 함수를 호출한 당일 23시 59분 59초 이후 상태확인 함수를 호출할 경우 오류가 반환됩니다.
-  * https://developers.barocert.com/reference/pass/java/login/api#GetLoginStatus
-  */
+    /*
+     * 간편로그인 요청 후 반환받은 접수아이디로 진행 상태를 확인합니다.
+     * 상태확인 함수는 간편로그인 요청 함수를 호출한 당일 23시 59분 59초까지만 호출 가능합니다.
+     * 간편로그인 요청 함수를 호출한 당일 23시 59분 59초 이후 상태확인 함수를 호출할 경우 오류가 반환됩니다.
+     * https://developers.barocert.com/reference/pass/php/login/api#GetLoginStatus
+     */
 
-  include 'common.php';
+    include 'common.php';
 
-  // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
-  $clientCode = '023070000014';
+    // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
+    $clientCode = '023070000014';
 
-  // 간편로그인 요청시 반환된 접수아이디
-  $receiptID = '02307280230700000140000000000005';
+    // 간편로그인 요청시 반환된 접수아이디
+    $receiptID = '02307280230700000140000000000005';
 
-  try {
-    $result = $PasscertService->getLoginStatus($clientCode, $receiptID);
-  }
-  catch(BarocertException $pe) {
-    $code = $pe->getCode();
-    $message = $pe->getMessage();
-  }
+    try {
+        $result = $PasscertService->getLoginStatus($clientCode, $receiptID);
+    }
+    catch(BarocertException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
     <body>
         <div id="content">

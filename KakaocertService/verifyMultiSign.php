@@ -7,14 +7,15 @@
 <?php
 
   /*
-   * 전자서명 요청시 반환된 접수아이디를 통해 서명을 검증합니다. (복수)
-   * 검증하기 API는 완료된 전자서명 요청당 1회만 요청 가능하며, 사용자가 서명을 완료후 유효시간(10분)이내에만 요청가능 합니다.
-   * https://developers.barocert.com/reference/kakao/java/sign/api-multi#VerifyMultiSign
+   * 완료된 전자서명을 검증하고 전자서명값(signedData)을 반환 받습니다.
+   * 카카오 보안정책에 따라 검증 API는 1회만 호출할 수 있습니다. 재시도시 오류가 반환됩니다.
+   * 전자서명 완료일시로부터 10분 이내에 검증 API를 호출하지 않으면 오류가 반환됩니다.
+   * https://developers.barocert.com/reference/kakao/php/sign/api-multi#VerifyMultiSign
    */
 
   include 'common.php';
 
-  // 이용기관코드, 파트너가 등록한 이용기관의 코드, (파트너 사이트에서 확인가능)
+  // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
   $clientCode = '023030000004';
 
   // 전자서명 요청시 반환받은 접수아이디
@@ -34,7 +35,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>전자서명 검증(복수)</legend>
+                <legend>카카오 전자서명 검증(복수)</legend>
                 <ul>
 
                 <?php

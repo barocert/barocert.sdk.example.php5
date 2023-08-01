@@ -7,9 +7,9 @@
 <?php
 
   /*
-  * 패스 이용자에게 본인인증을 요청합니다.
-  * https://developers.barocert.com/reference/pass/java/identity/api#RequestIdentity
-  */
+   * 패스 이용자에게 본인인증을 요청합니다.
+   * https://developers.barocert.com/reference/pass/php/identity/api#RequestIdentity
+   */
 
   include 'common.php';
 

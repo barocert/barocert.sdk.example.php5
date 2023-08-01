@@ -7,13 +7,13 @@
 <?php
 
   /*
-   * 카카오톡 사용자에게 출금동의 전자서명을 요청합니다.
-   * https://developers.barocert.com/reference/kakao/java/cms/api#RequestCMS
+   * 카카오톡 이용자에게 자동이체 출금동의를 요청합니다.
+   * https://developers.barocert.com/reference/kakao/php/cms/api#RequestCMS
    */
 
   include 'common.php';
 
-  // 이용기관코드, 파트너가 등록한 이용기관의 코드, (파트너 사이트에서 확인가능)
+  // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
   $clientCode = '023030000004';
 
   // 출금동의 요청 정보 객체
@@ -48,9 +48,8 @@
   // true - AppToApp 인증방식, false - Talk Message 인증방식
   $KakaoCMS->appUseYN = false; 
 
-  // App to App 방식 이용시, 에러시 호출할 URL
+  // App to App 방식 이용시, 호출할 URL
   // $KakaoCMS->returnURL = 'https://kakao.barocert.com';
-
 
   try {
     $result = $KakaocertService->requestCMS($clientCode, $KakaoCMS);
@@ -65,7 +64,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>출금동의 요청</legend>
+                <legend>카카오 출금동의 요청</legend>
                 <ul>
                 <?php
                 if ( isset($result) ) {

@@ -2,9 +2,9 @@
   /**
   * Kakaocert API PHP SDK Example
   *
-  * 업데이트 일자 : 2023-06-13
+  * 업데이트 일자 : 2023-07-26
   * 연동기술지원 연락처 : 1600-9854
-  * 연동기술지원 이메일 : dev@linkhubcorp.com
+  * 연동기술지원 이메일 : code@linkhubcorp.com
   *
   */
 

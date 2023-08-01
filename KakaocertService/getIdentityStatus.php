@@ -5,33 +5,33 @@
         <title>Barocert Kakao Service PHP 5.X Example.</title>
     </head>
 <?php
-  /*
-   * 본인인증 요청시 반환된 접수아이디를 통해 서명 상태를 확인합니다.
-   * https://developers.barocert.com/reference/kakao/java/identity/api#GetIdentityStatus
-   */
+    /*
+     * 본인인증 요청 후 반환받은 접수아이디로 본인인증 진행 상태를 확인합니다.
+     * https://developers.barocert.com/reference/kakao/php/identity/api#GetIdentityStatus
+     */
 
-  include 'common.php';
+    include 'common.php';
 
-  // 이용기관코드, 파트너가 등록한 이용기관의 코드, (파트너 사이트에서 확인가능)
-  $clientCode = '023030000004';
+    // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
+    $clientCode = '023030000004';
 
-  // 전자서명 요청시 반환된 접수아이디
-  $receiptID = '02304170230300000040000000000028';
+    // 본인인증 요청시 반환된 접수아이디
+    $receiptID = '02304170230300000040000000000028';
 
-  try {
+    try {
     $result = $KakaocertService->getIdentityStatus($clientCode, $receiptID);
-  }
-  catch(BarocertException $pe) {
+    }
+    catch(BarocertException $pe) {
     $code = $pe->getCode();
     $message = $pe->getMessage();
-  }
+    }
 ?>
     <body>
         <div id="content">
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>본인인증 상태확인</legend>
+                <legend>카카오 본인인증 상태확인</legend>
                 <ul>
                     <?php
                     if ( isset($code) ) {

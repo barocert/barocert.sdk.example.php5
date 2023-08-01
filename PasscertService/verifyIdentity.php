@@ -11,7 +11,7 @@
    * 반환받은 전자서명값(signedData)과 [1. RequestIdentity] 함수 호출에 입력한 Token의 동일 여부를 확인하여 이용자의 본인인증 검증을 완료합니다.
    * 검증 함수는 본인인증 요청 함수를 호출한 당일 23시 59분 59초까지만 호출 가능합니다.
    * 본인인증 요청 함수를 호출한 당일 23시 59분 59초 이후 검증 함수를 호출할 경우 오류가 반환됩니다.
-   * https://developers.barocert.com/reference/pass/java/identity/api#VerifyIdentity
+   * https://developers.barocert.com/reference/pass/php/identity/api#VerifyIdentity
    */
 
   include 'common.php';

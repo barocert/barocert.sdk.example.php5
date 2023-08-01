@@ -5,26 +5,26 @@
         <title>Barocert Kakao Service PHP 5.X Example.</title>
     </head>
 <?php
-  /*
-   * 카카오 출금동의 요청시 반환된 접수아이디를 통해 서명 상태를 확인합니다.
-   * https://developers.barocert.com/reference/kakao/java/cms/api#GetCMSStatus
-   */
+    /*
+     * 자동이체 출금동의 요청 후 반환받은 접수아이디로 인증 진행 상태를 확인합니다.
+     * https://developers.barocert.com/reference/kakao/php/cms/api#GetCMSStatus
+     */
 
-  include 'common.php';
+    include 'common.php';
 
-  // 이용기관코드, 파트너가 등록한 이용기관의 코드, (파트너 사이트에서 확인가능)
-  $clientCode = '023030000004';
+    // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
+    $clientCode = '023030000004';
 
-  // 출금동의 요청시 반환된 접수아이디
-  $receiptID = '02304120230300000040000000000023';
+    // 출금동의 요청시 반환된 접수아이디
+    $receiptID = '02304120230300000040000000000023';
 
-  try {
-    $result = $KakaocertService->getCMSStatus($clientCode, $receiptID);
-  }
-  catch(BarocertException $pe) {
-    $code = $pe->getCode();
-    $message = $pe->getMessage();
-  }
+    try {
+        $result = $KakaocertService->getCMSStatus($clientCode, $receiptID);
+    }
+    catch(BarocertException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
     <body>
         <div id="content">

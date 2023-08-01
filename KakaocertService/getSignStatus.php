@@ -6,33 +6,33 @@
     </head>
 <?php
 
-  /*
-   * 전자서명 요청에 대한 서명 상태를 확인합니다.
-   * https://developers.barocert.com/reference/kakao/java/sign/api-single#GetSignStatus
-   */
+    /*
+     * 전자서명(단건) 요청 후 반환받은 접수아이디로 인증 진행 상태를 확인합니다.
+     * https://developers.barocert.com/reference/kakao/php/sign/api-single#GetSignStatus
+     */
 
-  include 'common.php';
+    include 'common.php';
 
-  // 이용기관코드, 파트너가 등록한 이용기관의 코드, (파트너 사이트에서 확인가능)
-  $clientCode = '023030000004';
+    // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
+    $clientCode = '023030000004';
 
-  // 전자서명 요청시 반환받은 접수아이디
-  $receiptID = '02304120230300000040000000000028';
+    // 전자서명 요청시 반환받은 접수아이디
+    $receiptID = '02304120230300000040000000000028';
 
-  try {
+    try {
     $result = $KakaocertService->getSignStatus($clientCode, $receiptID);
-  }
-  catch(BarocertException $ke) {
+    }
+    catch(BarocertException $ke) {
     $code = $ke->getCode();
     $message = $ke->getMessage();
-  }
+    }
 ?>
     <body>
         <div id="content">
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>전자서명 요청(단건)</legend>
+                <legend>카카오 전자서명 요청(단건)</legend>
                 <ul>
                     <?php
                     if ( isset($code) ) {

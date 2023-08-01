@@ -6,28 +6,28 @@
     </head>
 <?php
 
- /*
-  * 전자서명 요청 후 반환받은 접수아이디로 인증 진행 상태를 확인합니다.
-  * 상태확인 함수는 전자서명 요청 함수를 호출한 당일 23시 59분 59초까지만 호출 가능합니다.
-  * 전자서명 요청 함수를 호출한 당일 23시 59분 59초 이후 상태확인 함수를 호출할 경우 오류가 반환됩니다.
-  * https://developers.barocert.com/reference/pass/java/sign/api#GetSignStatus
-  */
+    /*
+     * 전자서명 요청 후 반환받은 접수아이디로 인증 진행 상태를 확인합니다.
+     * 상태확인 함수는 전자서명 요청 함수를 호출한 당일 23시 59분 59초까지만 호출 가능합니다.
+     * 전자서명 요청 함수를 호출한 당일 23시 59분 59초 이후 상태확인 함수를 호출할 경우 오류가 반환됩니다.
+     * https://developers.barocert.com/reference/pass/php/sign/api#GetSignStatus
+     */
 
-  include 'common.php';
+    include 'common.php';
 
-  // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
-  $clientCode = '023070000014';
+    // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
+    $clientCode = '023070000014';
 
-  // 전자서명 요청시 반환받은 접수아이디
-  $receiptID = '02307280230700000140000000000001';
+    // 전자서명 요청시 반환받은 접수아이디
+    $receiptID = '02307280230700000140000000000001';
 
-  try {
-    $result = $PasscertService->getSignStatus($clientCode, $receiptID);
-  }
-  catch(BarocertException $ke) {
-    $code = $ke->getCode();
-    $message = $ke->getMessage();
-  }
+    try {
+        $result = $PasscertService->getSignStatus($clientCode, $receiptID);
+    }
+    catch(BarocertException $ke) {
+        $code = $ke->getCode();
+        $message = $ke->getMessage();
+    }
 ?>
     <body>
         <div id="content">

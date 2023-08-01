@@ -5,28 +5,28 @@
         <title>Barocert Pass Service PHP 5.X Example.</title>
     </head>
 <?php
- /*
-  * 자동이체 출금동의 요청 후 반환받은 접수아이디로 인증 진행 상태를 확인합니다.
-  * 상태확인 함수는 자동이체 출금동의 요청 함수를 호출한 당일 23시 59분 59초까지만 호출 가능합니다.
-  * 자동이체 출금동의 요청 함수를 호출한 당일 23시 59분 59초 이후 상태확인 함수를 호출할 경우 오류가 반환됩니다.
-  * https://developers.barocert.com/reference/pass/java/cms/api#GetCMSStatus
-  */
+    /*
+     * 자동이체 출금동의 요청 후 반환받은 접수아이디로 인증 진행 상태를 확인합니다.
+     * 상태확인 함수는 자동이체 출금동의 요청 함수를 호출한 당일 23시 59분 59초까지만 호출 가능합니다.
+     * 자동이체 출금동의 요청 함수를 호출한 당일 23시 59분 59초 이후 상태확인 함수를 호출할 경우 오류가 반환됩니다.
+     * https://developers.barocert.com/reference/pass/php/cms/api#GetCMSStatus
+     */
 
-  include 'common.php';
+    include 'common.php';
 
-  // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
-  $clientCode = '023070000014';
+    // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
+    $clientCode = '023070000014';
 
-  // 출금동의 요청시 반환된 접수아이디
-  $receiptID = '02307280230700000140000000000002';
+    // 출금동의 요청시 반환된 접수아이디
+    $receiptID = '02307280230700000140000000000002';
 
-  try {
-    $result = $PasscertService->getCMSStatus($clientCode, $receiptID);
-  }
-  catch(BarocertException $pe) {
-    $code = $pe->getCode();
-    $message = $pe->getMessage();
-  }
+    try {
+        $result = $PasscertService->getCMSStatus($clientCode, $receiptID);
+    }
+    catch(BarocertException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
     <body>
         <div id="content">

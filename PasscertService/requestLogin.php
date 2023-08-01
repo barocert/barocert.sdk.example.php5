@@ -6,59 +6,59 @@
     </head>
 <?php
 
- /*
-  * 패스 이용자에게 간편로그인을 요청합니다.
-  * https://developers.barocert.com/reference/pass/java/login/api#RequestLogin
-  */
+    /*
+     * 패스 이용자에게 간편로그인을 요청합니다.
+     * https://developers.barocert.com/reference/pass/php/login/api#RequestLogin
+     */
 
-  include 'common.php';
+    include 'common.php';
 
-  // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
-  $clientCode = '023070000014';
+    // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
+    $clientCode = '023070000014';
 
-  // 간편로그인 요청정보 객체
-  $PassLogin = new PassLogin();
+    // 간편로그인 요청정보 객체
+    $PassLogin = new PassLogin();
 
-  // 수신자 휴대폰번호 - 11자 (하이픈 제외)
-  $PassLogin->receiverHP = $PasscertService->encrypt('01012341234');
-  // 수신자 성명 - 80자
-  $PassLogin->receiverName = $PasscertService->encrypt('홍길동');
-  // 수신자 생년월일 - 8자 (yyyyMMdd)
-  $PassLogin->receiverBirthday = $PasscertService->encrypt('19700101');
-  
-  // 요청 메시지 제목 - 최대 40자
-  $PassLogin->reqTitle = '간편로그인 요청 메시지 제목';
-  // 요청 메시지 - 최대 500자
-  $PassLogin->reqMessage = $PasscertService->encrypt('간편로그인 요청 메시지 내용');
-  // 고객센터 연락처 - 최대 12자
-  $PassLogin->callCenterNum = '1600-9854';
-  // 요청 만료시간 - 최대 1,000(초)까지 입력 가능
-  $PassLogin->expireIn = 1000;
-  // 서명 원문 - 최대 2,800자 까지 입력가능
-  $PassLogin->token = $PasscertService->encrypt('간편로그인 요청 토큰');
+    // 수신자 휴대폰번호 - 11자 (하이픈 제외)
+    $PassLogin->receiverHP = $PasscertService->encrypt('01012341234');
+    // 수신자 성명 - 80자
+    $PassLogin->receiverName = $PasscertService->encrypt('홍길동');
+    // 수신자 생년월일 - 8자 (yyyyMMdd)
+    $PassLogin->receiverBirthday = $PasscertService->encrypt('19700101');
 
-  // 사용자 동의 필요 여부
-  $PassLogin->userAgreementYN = true;
-  // 사용자 정보 포함 여부
-  $PassLogin->receiverInfoYN = true;
+    // 요청 메시지 제목 - 최대 40자
+    $PassLogin->reqTitle = '간편로그인 요청 메시지 제목';
+    // 요청 메시지 - 최대 500자
+    $PassLogin->reqMessage = $PasscertService->encrypt('간편로그인 요청 메시지 내용');
+    // 고객센터 연락처 - 최대 12자
+    $PassLogin->callCenterNum = '1600-9854';
+    // 요청 만료시간 - 최대 1,000(초)까지 입력 가능
+    $PassLogin->expireIn = 1000;
+    // 서명 원문 - 최대 2,800자 까지 입력가능
+    $PassLogin->token = $PasscertService->encrypt('간편로그인 요청 토큰');
 
-  // AppToApp 요청 여부
-  // true - AppToApp 인증방식, false - Push 인증방식
-  $PassLogin->appUseYN = false;
-  // ApptoApp 인증방식에서 사용
-  // 통신사 유형('SKT', 'KT', 'LGU'), 대문자 입력(대소문자 구분)
-  // $PassLogin->telcoType = 'SKT';
-  // ApptoApp 인증방식에서 사용
-  // 모바일장비 유형('ANDROID', 'IOS'), 대문자 입력(대소문자 구분)
-  // $PassLogin->deviceOSType = 'IOS';
+    // 사용자 동의 필요 여부
+    $PassLogin->userAgreementYN = true;
+    // 사용자 정보 포함 여부
+    $PassLogin->receiverInfoYN = true;
 
-  try {
-    $result = $PasscertService->requestLogin($clientCode, $PassLogin);
-  }
-  catch(BarocertException $pe) {
-    $code = $pe->getCode();
-    $message = $pe->getMessage();
-  }
+    // AppToApp 요청 여부
+    // true - AppToApp 인증방식, false - Push 인증방식
+    $PassLogin->appUseYN = false;
+    // ApptoApp 인증방식에서 사용
+    // 통신사 유형('SKT', 'KT', 'LGU'), 대문자 입력(대소문자 구분)
+    // $PassLogin->telcoType = 'SKT';
+    // ApptoApp 인증방식에서 사용
+    // 모바일장비 유형('ANDROID', 'IOS'), 대문자 입력(대소문자 구분)
+    // $PassLogin->deviceOSType = 'IOS';
+
+    try {
+        $result = $PasscertService->requestLogin($clientCode, $PassLogin);
+    }
+    catch(BarocertException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 ?>
     <body>
         <div id="content">

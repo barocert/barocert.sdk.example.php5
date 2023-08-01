@@ -6,34 +6,34 @@
     </head>
 <?php
 
- /*
-  * 완료된 전자서명을 검증하고 전자서명값(signedData)을 반환 받습니다.
-  * 검증 함수는 전자서명 요청 함수를 호출한 당일 23시 59분 59초까지만 호출 가능합니다.
-  * 전자서명 요청 함수를 호출한 당일 23시 59분 59초 이후 검증 함수를 호출할 경우 오류가 반환됩니다.
-  * https://developers.barocert.com/reference/pass/java/sign/api#VerifySign
-  */
+    /*
+     * 완료된 전자서명을 검증하고 전자서명값(signedData)을 반환 받습니다.
+     * 검증 함수는 전자서명 요청 함수를 호출한 당일 23시 59분 59초까지만 호출 가능합니다.
+     * 전자서명 요청 함수를 호출한 당일 23시 59분 59초 이후 검증 함수를 호출할 경우 오류가 반환됩니다.
+     * https://developers.barocert.com/reference/pass/php/sign/api#VerifySign
+     */
 
-  include 'common.php';
+    include 'common.php';
 
-  // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
-  $clientCode = '023070000014';
+    // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
+    $clientCode = '023070000014';
 
-  // 전자서명 요청시 반환받은 접수아이디
-  $receiptID = '02307310230700000140000000000002';
+    // 전자서명 요청시 반환받은 접수아이디
+    $receiptID = '02307310230700000140000000000002';
 
-  // 전자서명 검증 요청정보 객체
-  $PassSignVerify = new PassSignVerify();
+    // 전자서명 검증 요청정보 객체
+    $PassSignVerify = new PassSignVerify();
 
-  $PassSignVerify->receiverHP = $PasscertService->encrypt('01012341234');
-  $PassSignVerify->receiverName = $PasscertService->encrypt('홍길동');
+    $PassSignVerify->receiverHP = $PasscertService->encrypt('01012341234');
+    $PassSignVerify->receiverName = $PasscertService->encrypt('홍길동');
 
-  try {
-    $result = $PasscertService->verifySign($clientCode, $receiptID, $PassSignVerify);
-  }
-  catch(BarocertException $pe) {
-    $code = $pe->getCode();
-    $message = $pe->getMessage();
-  }
+    try {
+        $result = $PasscertService->verifySign($clientCode, $receiptID, $PassSignVerify);
+    }
+    catch(BarocertException $pe) {
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
+    }
 
 ?>
     <body>

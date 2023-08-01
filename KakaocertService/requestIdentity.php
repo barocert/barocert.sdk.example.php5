@@ -7,13 +7,13 @@
 <?php
 
   /*
-   * 카카오톡 사용자에게 본인인증 전자서명을 요청합니다.
-   * https://developers.barocert.com/reference/kakao/java/identity/api#RequestIdentity
+   * 카카오톡 이용자에게 본인인증을 요청합니다.
+   * https://developers.barocert.com/reference/kakao/php/identity/api#RequestIdentity
    */
 
   include 'common.php';
 
-  // 이용기관코드, 파트너가 등록한 이용기관의 코드, (파트너 사이트에서 확인가능)
+  // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
   $clientCode = '023030000004';
 
   // 본인인증 요청정보 객체
@@ -33,12 +33,11 @@
   // 서명 원문 - 최대 2,800자 까지 입력가능
   $KakaoIdentity->token = $KakaocertService->encrypt('본인인증요청토큰');
 
-
   // AppToApp 인증요청 여부
   // true - AppToApp 인증방식, false - Talk Message 인증방식
   $KakaoIdentity->appUseYN = false;
 
-  // App to App 방식 이용시, 에러시 호출할 URL
+  // App to App 방식 이용시, 호출할 URL
   // $KakaoIdentity->returnURL = 'https://kakao.barocert.com';
 
   try {
@@ -54,7 +53,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>본인인증 요청</legend>
+                <legend>카카오 본인인증 요청</legend>
                 <ul>
 
                 <?php
