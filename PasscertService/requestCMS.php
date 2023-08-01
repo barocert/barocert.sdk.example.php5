@@ -7,7 +7,8 @@
 <?php
 
   /*
-  * 패스 사용자에게 출금동의 전자서명을 요청합니다.
+  * 패스 이용자에게 자동이체 출금동의를 요청합니다.
+  * https://developers.barocert.com/reference/pass/java/cms/api#RequestCMS
   */
 
   include 'common.php';

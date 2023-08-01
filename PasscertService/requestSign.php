@@ -6,8 +6,9 @@
     </head>
 <?php
 
-  /*
-  * 패스 사용자에게 전자서명을 요청합니다.
+ /*
+  * 패스 이용자에게 문서의 전자서명을 요청합니다.
+  * https://developers.barocert.com/reference/pass/java/sign/api#RequestSign
   */
 
   include 'common.php';

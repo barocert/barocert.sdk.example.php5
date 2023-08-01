@@ -6,9 +6,9 @@
     </head>
 <?php
 
-  /*
-  * 패스 사용자에게 간편로그인 전자서명을 요청합니다.
-  * - 
+ /*
+  * 패스 이용자에게 간편로그인을 요청합니다.
+  * https://developers.barocert.com/reference/pass/java/login/api#RequestLogin
   */
 
   include 'common.php';

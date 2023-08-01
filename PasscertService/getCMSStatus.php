@@ -5,8 +5,11 @@
         <title>Barocert Pass Service PHP 5.X Example.</title>
     </head>
 <?php
-  /*
-  * 출금동의 요청시 반환된 접수아이디를 통해 서명 상태를 확인합니다.
+ /*
+  * 자동이체 출금동의 요청 후 반환받은 접수아이디로 인증 진행 상태를 확인합니다.
+  * 상태확인 함수는 자동이체 출금동의 요청 함수를 호출한 당일 23시 59분 59초까지만 호출 가능합니다.
+  * 자동이체 출금동의 요청 함수를 호출한 당일 23시 59분 59초 이후 상태확인 함수를 호출할 경우 오류가 반환됩니다.
+  * https://developers.barocert.com/reference/pass/java/cms/api#GetCMSStatus
   */
 
   include 'common.php';

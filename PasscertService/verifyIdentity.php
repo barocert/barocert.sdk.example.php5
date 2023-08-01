@@ -7,9 +7,12 @@
 <?php
 
   /*
-   * 본인인증 요청시 반환된 접수아이디를 통해 본인인증 서명을 검증합니다.
-   * 검증하기 API는 완료된 전자서명 요청당 1회만 요청 가능하며, 사용자가 서명을 완료후 유효시간(10분)이내에만 요청가능 합니다.
-  */
+   * 완료된 전자서명을 검증하고 전자서명값(signedData)을 반환 받습니다.
+   * 반환받은 전자서명값(signedData)과 [1. RequestIdentity] 함수 호출에 입력한 Token의 동일 여부를 확인하여 이용자의 본인인증 검증을 완료합니다.
+   * 검증 함수는 본인인증 요청 함수를 호출한 당일 23시 59분 59초까지만 호출 가능합니다.
+   * 본인인증 요청 함수를 호출한 당일 23시 59분 59초 이후 검증 함수를 호출할 경우 오류가 반환됩니다.
+   * https://developers.barocert.com/reference/pass/java/identity/api#VerifyIdentity
+   */
 
   include 'common.php';
 

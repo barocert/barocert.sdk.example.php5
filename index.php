@@ -44,7 +44,7 @@
             <li><a href="KakaocertService/verifyLogin.php">VerifyLogin</a> - 간편로그인 검증</li>
         </ul>
     </fieldset>
-   
+
     <br/>
     <fieldset class="fieldset1">
         <legend>Passcert 본인인증 API</legend>

@@ -22,13 +22,13 @@
 
     $PasscertService = new PasscertService($LinkID, $SecretKey);
 
-    // 인증토큰에 대한 IP제한기능 사용여부, 권장(true)
+    // 인증토큰에 대한 IP제한기능 사용여부, true-사용, false-미사용, 기본값(true)
     $PasscertService->IPRestrictOnOff(true);
 
-    // 패스써트 API 서비스 고정 IP 사용여부, 기본값(false)
+    // 패스써트 API 서비스 고정 IP 사용여부, true-사용, false-미사용, 기본값(false)
     $PasscertService->UseStaticIP(false);
 
-    // 로컬시스템 시간 사용 여부 true(기본값) - 사용, false(미사용)
+    // 로컬시스템 시간 사용여부, true-사용, false-미사용, 기본값(true)
     $PasscertService->UseLocalTimeYN(true);
 
 ?>
