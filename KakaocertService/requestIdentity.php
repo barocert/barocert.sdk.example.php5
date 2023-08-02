@@ -14,7 +14,7 @@
   include 'common.php';
 
   // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
-  $clientCode = '023030000004';
+  $clientCode = '023040000001';
 
   // 본인인증 요청정보 객체
   $KakaoIdentity = new KakaoIdentity();

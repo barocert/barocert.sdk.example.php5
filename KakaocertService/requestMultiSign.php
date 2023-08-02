@@ -14,7 +14,7 @@
   include 'common.php';
 
   // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
-  $clientCode = '023030000004';
+  $clientCode = '023040000001';
 
   // 전자서명 요청정보 객체
   $KakaoMultiSign = new KakaoMultiSign();
@@ -27,7 +27,7 @@
   $KakaoMultiSign->receiverBirthday = $KakaocertService->encrypt('19700101');
 
     // 인증요청 메시지 제목 - 최대 40자
-  $KakaoMultiSign->reqTitle = '전자서명단건테스트';
+  $KakaoMultiSign->reqTitle = '전자서명복수테스트';
   // 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
   $KakaoMultiSign->expireIn = 1000;
 
