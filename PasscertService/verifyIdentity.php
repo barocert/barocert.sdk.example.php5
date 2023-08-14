@@ -50,7 +50,8 @@
                 <li>접수 아이디 (ReceiptID) : <?php echo $result->receiptID ?></li>
                 <li>상태 (State) : <?php echo $result->state ?></li>
                 <li>수신자 성명 (ReceiverName) : <?php echo $result->receiverName ?></li>
-                <li>수신자 생년월일 (ReceiverBirthday) : <?php echo $result->receiverBirthday ?></li>
+                <li>수신자 출생년도 (ReceiverYear) : <?php echo $result->receiverYear ?></li>
+                <li>수신자 출생월일 (ReceiverDay) : <?php echo $result->receiverDay ?></li>
                 <li>수신자 성별 (ReceiverGender) : <?php echo $result->receiverGender ?></li>
                 <li>수신자 통신사유형 (ReceiverTelcoType) : <?php echo $result->receiverTelcoType ?></li>
                 <li>전자서명 데이터 (SignedData) : <?php echo $result->signedData ?></li>
