@@ -1,3 +1,4 @@
 [submodule "Barocert"]
 	path = Barocert
+	branch = main
 	url = https://github.com/barocert/barocert.sdk.php5.git

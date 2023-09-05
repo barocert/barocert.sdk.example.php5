@@ -46,6 +46,30 @@
     </fieldset>
 
     <br/>
+
+    <fieldset class="fieldset1">
+        <legend>Navercert 본인인증 API</legend>
+        <ul>
+            <li><a href="NavercertService/requestIdentity.php">RequestIdentity</a> - 본인인증 요청</li>
+            <li><a href="NavercertService/getIdentityStatus.php">GetIdentityStatus</a> - 본인인증 상태확인</li>
+            <li><a href="NavercertService/verifyIdentity.php">VerifyIdentity</a> - 본인인증 검증</li>
+        </ul>
+    </fieldset>
+    
+    <fieldset class="fieldset1">
+        <legend>Navercert 전자서명 API</legend>
+        <ul>
+            <li><a href="NavercertService/requestSign.php">RequestSign</a> - 전자서명 요청(단건)</li>
+            <li><a href="NavercertService/getSignStatus.php">GetSignStatus</a> - 전자서명 상태확인(단건)</li>
+            <li><a href="NavercertService/verifySign.php">VerifySign</a> - 전자서명 검증(단건)</li>
+            <li><a href="NavercertService/requestMultiSign.php">RequestMultiSign</a> - 전자서명 요청(복수)</li>
+            <li><a href="NavercertService/getMultiSignStatus.php">GetMultiSignStatus</a> - 전자서명 상태확인(복수)</li>
+            <li><a href="NavercertService/verifyMultiSign.php">VerifyMultiSign</a> - 전자서명 검증(복수)</li>
+        </ul>
+    </fieldset>
+
+    <br/>
+
     <fieldset class="fieldset1">
         <legend>Passcert 본인인증 API</legend>
         <ul>
