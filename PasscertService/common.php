@@ -28,7 +28,4 @@
     // 패스써트 API 서비스 고정 IP 사용여부, true-사용, false-미사용, 기본값(false)
     $PasscertService->UseStaticIP(false);
 
-    // 로컬시스템 시간 사용여부, true-사용, false-미사용, 기본값(true)
-    $PasscertService->UseLocalTimeYN(true);
-
 ?>
