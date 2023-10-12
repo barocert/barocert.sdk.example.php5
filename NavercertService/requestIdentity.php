@@ -33,14 +33,14 @@
 
   // AppToApp 인증요청 여부
   // true - AppToApp 인증방식, false - Talk Message 인증방식
-  $NaverIdentity->appUseYN = true;
+  $NaverIdentity->appUseYN = false;
 
   // AppToApp 인증방식에서 사용
   // 모바일장비 유형('ANDROID', 'IOS'), 대문자 입력(대소문자 구분)
-  $NaverIdentity->deviceOSType = 'IOS';
+  // $NaverIdentity->deviceOSType = 'IOS';
 
   // AppToApp 방식 이용시, 호출할 URL
-  $NaverIdentity->returnURL = 'navercert://sign';
+  // $NaverIdentity->returnURL = 'navercert://sign';
 
   try {
     $result = $NavercertService->requestIdentity($clientCode, $NaverIdentity);
