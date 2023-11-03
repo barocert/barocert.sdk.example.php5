@@ -29,13 +29,13 @@
     // 요청 메시지 제목 - 최대 40자
     $PassSign->reqTitle = '전자서명증요청 메시지 제목';
     // 요청 메시지 - 최대 500자
-    $PassSign->reqMessage = $PasscertService->encrypt('간편로그인 요청 메시지 내용');
+    $PassSign->reqMessage = $PasscertService->encrypt('간편로그인 요청 메시지');
     // 고객센터 연락처 - 최대 12자
     $PassSign->callCenterNum = '1600-9854';
     // 요청 만료시간 - 최대 1,000(초)까지 입력 가능
     $PassSign->expireIn = 1000;
     // 서명 원문 - 원문 2,800자 까지 입력가능
-    $PassSign->token = $PasscertService->encrypt('전자서명 요청 토큰');
+    $PassSign->token = $PasscertService->encrypt('전자서명 요청 원문');
     // 서명 원문 유형
     // 'TEXT' - 일반 텍스트, 'HASH' - HASH 데이터, 'URL' - URL 데이터
     // 원본데이터(originalTypeCode, originalURL, originalFormatCode) 입력시 'TEXT'사용 불가
@@ -84,7 +84,7 @@
                 <?php
                 if ( isset($result) ) {
                 ?>
-                <li>접수아이디 (ReceiptID) : <?php echo $result->receiptId ?></li>
+                <li>접수아이디 (ReceiptID) : <?php echo $result->receiptID ?></li>
                 <li>앱스킴 (Scheme) : <?php echo $result->scheme ?></li>
                 <li>앱다운로드URL (marketUrl) : <?php echo $result->marketUrl ?></li>
                 <?php

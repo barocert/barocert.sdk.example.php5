@@ -27,15 +27,15 @@
   $NaverSign->receiverBirthday = $NavercertService->encrypt('19700101');
 
   // 인증요청 메시지 제목 - 최대 40자
-  $NaverSign->reqTitle = '전자서명단건테스트';
+  $NaverSign->reqTitle = '전자서명(단건) 요청 메시지 제목';
   // 고객센터 연락처 - 최대 12자
   $NaverSign->callCenterNum = '1600-9854';
   // 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
   $NaverSign->expireIn = 1000;
   // 요청 메시지 - 최대 500자
-  $NaverSign->reqMessage = $NavercertService->encrypt('본인인증 요청 메시지 내용');
+  $NaverSign->reqMessage = $NavercertService->encrypt('전자서명(단건) 요청 메시지');
   // 서명 원문 - 원문 2,800자 까지 입력가능
-  $NaverSign->token = $NavercertService->encrypt('전자서명단건테스트데이터');
+  $NaverSign->token = $NavercertService->encrypt('전자서명(단건) 요청 원문');
   // 서명 원문 유형
   // TEXT - 일반 텍스트, HASH - HASH 데이터
   $NaverSign->tokenType = 'TEXT'; // TEXT, HASH
@@ -64,7 +64,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>네이버 전자서명 요청(단건)</legend>
+                <legend>네이버 전자서명(단건) 요청</legend>
                 <ul>
 
                 <?php

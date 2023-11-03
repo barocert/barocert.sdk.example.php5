@@ -29,7 +29,7 @@
   // 요청 메시지 제목 - 최대 40자
   $PassCMS->reqTitle = '출금동의 요청 메시지 제목';
   // 요청 메시지 - 최대 500자
-  $PassCMS->reqMessage = $PasscertService->encrypt('출금동의 요청 메시지 내용');
+  $PassCMS->reqMessage = $PasscertService->encrypt('출금동의 요청 메시지');
   // 고객센터 연락처 - 최대 12자
   $PassCMS->callCenterNum = '1600-9854';
   // 요청 만료시간 - 최대 1,000(초)까지 입력 가능

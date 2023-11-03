@@ -27,7 +27,7 @@
   $KakaoMultiSign->receiverBirthday = $KakaocertService->encrypt('19700101');
 
     // 인증요청 메시지 제목 - 최대 40자
-  $KakaoMultiSign->reqTitle = '전자서명복수테스트';
+  $KakaoMultiSign->reqTitle = '전자서명(복수) 요청 메시지 제목';
   // 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
   $KakaoMultiSign->expireIn = 1000;
 
@@ -37,15 +37,15 @@
   
   $KakaoMultiSign->tokens[] = new KakaoMultiSignTokens();
   // 인증요청 메시지 제목 - 최대 40자
-  $KakaoMultiSign->tokens[0]->reqTitle = "전자서명복수문서테스트1";
+  $KakaoMultiSign->tokens[0]->reqTitle = "전자서명(복수) 요청 메시지 제목 1";
   // 서명 원문 - 원문 2,800자 까지 입력가능
-  $KakaoMultiSign->tokens[0]->token = $KakaocertService->encrypt("전자서명복수테스트데이터1");
+  $KakaoMultiSign->tokens[0]->token = $KakaocertService->encrypt("전자서명(복수) 요청 원문 1");
 
   $KakaoMultiSign->tokens[] = new KakaoMultiSignTokens();
   // 인증요청 메시지 제목 - 최대 40자
-  $KakaoMultiSign->tokens[1]->reqTitle = "전자서명복수문서테스트2";
+  $KakaoMultiSign->tokens[1]->reqTitle = "전자서명(복수) 요청 메시지 제목 2";
   // 서명 원문 - 원문 2,800자 까지 입력가능
-  $KakaoMultiSign->tokens[1]->token = $KakaocertService->encrypt("전자서명복수테스트데이터2");
+  $KakaoMultiSign->tokens[1]->token = $KakaocertService->encrypt("전자서명(복수) 요청 원문 2");
 
   // 서명 원문 유형
   // TEXT - 일반 텍스트, HASH - HASH 데이터
@@ -71,7 +71,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>카카오 전자서명 요청(복수)</legend>
+                <legend>카카오 전자서명(복수) 요청</legend>
                 <ul>
 
                 <?php

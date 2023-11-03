@@ -29,13 +29,13 @@
     // 요청 메시지 제목 - 최대 40자
     $PassLogin->reqTitle = '간편로그인 요청 메시지 제목';
     // 요청 메시지 - 최대 500자
-    $PassLogin->reqMessage = $PasscertService->encrypt('간편로그인 요청 메시지 내용');
+    $PassLogin->reqMessage = $PasscertService->encrypt('간편로그인 요청 메시지');
     // 고객센터 연락처 - 최대 12자
     $PassLogin->callCenterNum = '1600-9854';
     // 요청 만료시간 - 최대 1,000(초)까지 입력 가능
     $PassLogin->expireIn = 1000;
     // 서명 원문 - 최대 2,800자 까지 입력가능
-    $PassLogin->token = $PasscertService->encrypt('간편로그인 요청 토큰');
+    $PassLogin->token = $PasscertService->encrypt('간편로그인 요청 원문');
 
     // 사용자 동의 필요 여부
     $PassLogin->userAgreementYN = true;
@@ -71,7 +71,7 @@
                 <?php
                 if ( isset($result) ) {
                 ?>
-                <li>접수아이디 (ReceiptId) : <?php echo $result->receiptId ?></li>
+                <li>접수아이디 (ReceiptID) : <?php echo $result->receiptID ?></li>
                 <li>앱스킴 (Scheme) : <?php echo $result->scheme ?></li>
                 <li>앱다운로드URL (marketUrl) : <?php echo $result->marketUrl ?></li>
                 <?php
