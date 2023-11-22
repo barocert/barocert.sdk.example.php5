@@ -28,6 +28,8 @@
 
     // 인증요청 메시지 제목 - 최대 40자
   $KakaoMultiSign->reqTitle = '전자서명(복수) 요청 메시지 제목';
+  // 상세 설명 - 최대 500자
+  $KakaoMultiSign->extraMessage = $kakaocertService->encrypt("전자서명(복수) 상세 설명");
   // 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
   $KakaoMultiSign->expireIn = 1000;
 
@@ -36,14 +38,14 @@
   $KakaoMultiSign->tokens = array();
   
   $KakaoMultiSign->tokens[] = new KakaoMultiSignTokens();
-  // 인증요청 메시지 제목 - 최대 40자
-  $KakaoMultiSign->tokens[0]->reqTitle = "전자서명(복수) 요청 메시지 제목 1";
+  // 서명 요청 제목 - 최대 40자
+  $KakaoMultiSign->tokens[0]->signTitle = "전자서명(복수) 서명 요청 제목 1";
   // 서명 원문 - 원문 2,800자 까지 입력가능
   $KakaoMultiSign->tokens[0]->token = $KakaocertService->encrypt("전자서명(복수) 요청 원문 1");
 
   $KakaoMultiSign->tokens[] = new KakaoMultiSignTokens();
-  // 인증요청 메시지 제목 - 최대 40자
-  $KakaoMultiSign->tokens[1]->reqTitle = "전자서명(복수) 요청 메시지 제목 2";
+  // 서명 요청 제목 - 최대 40자
+  $KakaoMultiSign->tokens[1]->signTitle = "전자서명(복수) 서명 요청 제목 2";
   // 서명 원문 - 원문 2,800자 까지 입력가능
   $KakaoMultiSign->tokens[1]->token = $KakaocertService->encrypt("전자서명(복수) 요청 원문 2");
 

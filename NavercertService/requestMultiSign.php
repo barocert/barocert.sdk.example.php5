@@ -43,7 +43,7 @@
 
   // 서명 원문 유형
   // TEXT - 일반 텍스트, HASH - HASH 데이터
-  $NaverMultiSign->tokens[0]->tokenType = 'TEXT'; // TEXT, HASH
+  $NaverMultiSign->tokens[0]->tokenType = 'TEXT'; 
   // 서명 원문 - 원문 2,800자 까지 입력가능
   $NaverMultiSign->tokens[0]->token = $NavercertService->encrypt("전자서명(복수) 요청 원문 1");
 
@@ -51,7 +51,7 @@
 
   // 서명 원문 유형
   // TEXT - 일반 텍스트, HASH - HASH 데이터
-  $NaverMultiSign->tokens[1]->tokenType = 'TEXT'; // TEXT, HASH
+  $NaverMultiSign->tokens[1]->tokenType = 'TEXT'; 
   // 서명 원문 - 원문 2,800자 까지 입력가능
   $NaverMultiSign->tokens[1]->token = $NavercertService->encrypt("전자서명(복수) 요청 원문 2");
 
