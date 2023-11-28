@@ -28,8 +28,8 @@
 
     // 인증요청 메시지 제목 - 최대 40자
   $KakaoMultiSign->reqTitle = '전자서명(복수) 요청 메시지 제목';
-  // 상세 설명 - 최대 500자
-  $KakaoMultiSign->extraMessage = $KakaocertService->encrypt("전자서명(복수) 상세 설명");
+  // 커스텀 메시지 - 최대 500자
+  $KakaoMultiSign->extraMessage = $KakaocertService->encrypt("전자서명(복수) 커스텀 메시지");
   // 인증요청 만료시간 - 최대 1,000(초)까지 입력 가능
   $KakaoMultiSign->expireIn = 1000;
 
