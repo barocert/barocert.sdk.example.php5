@@ -14,7 +14,7 @@
   include 'common.php';
 
   // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
-  $clientCode = '023060000088';
+  $clientCode = '023090000021';
 
   // 전자서명 요청정보 객체
   $NaverSign = new NaverSign();
@@ -34,11 +34,15 @@
   $NaverSign->expireIn = 1000;
   // 요청 메시지 - 최대 500자
   $NaverSign->reqMessage = $NavercertService->encrypt('전자서명(단건) 요청 메시지');
+    // 서명 원문 유형
+  // TEXT - 일반 텍스트, HASH - HASH 데이터
+  $NaverSign->tokenType = 'TEXT';
   // 서명 원문 - 원문 2,800자 까지 입력가능
   $NaverSign->token = $NavercertService->encrypt('전자서명(단건) 요청 원문');
   // 서명 원문 유형
-  // TEXT - 일반 텍스트, HASH - HASH 데이터
-  $NaverSign->tokenType = 'TEXT'; // TEXT, HASH
+  // $NaverSign->tokenType = 'HASH';
+  // 서명 원문 유형이 HASH인 경우, 원문은 SHA-256, Base64 URL Safe No Padding을 사용
+  // $NaverSign->token = $NavercertService->encrypt($NavercertService->sha256('전자서명(단건) 요청 원문'));
 
   // AppToApp 인증요청 여부
   // true - AppToApp 인증방식, false - Talk Message 인증방식
@@ -49,6 +53,7 @@
   // $NaverSign->deviceOSType = 'IOS';
 
   // AppToApp 방식 이용시, 호출할 URL
+  // "http", "https"등의 웹프로토콜 사용 불가
   // $NaverSign->returnURL = 'navercert://sign';
 
   try {

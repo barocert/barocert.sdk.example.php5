@@ -14,7 +14,7 @@
   include 'common.php';
 
   // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
-  $clientCode = '023060000088';
+  $clientCode = '023090000021';
 
   // 전자서명 요청정보 객체
   $NaverMultiSign = new NaverMultiSign();
@@ -46,6 +46,10 @@
   $NaverMultiSign->tokens[0]->tokenType = 'TEXT'; 
   // 서명 원문 - 원문 2,800자 까지 입력가능
   $NaverMultiSign->tokens[0]->token = $NavercertService->encrypt("전자서명(복수) 요청 원문 1");
+  // 서명 원문 유형
+  // $NaverMultiSign->tokens[0]->tokenType = 'HASH'; 
+  // 서명 원문 유형이 HASH인 경우, 원문은 SHA-256, Base64 URL Safe No Padding을 사용
+  // $NaverMultiSign->tokens[0]->token = $NavercertService->encrypt($NavercertService->sha256("전자서명(복수) 요청 원문 1"));
 
   $NaverMultiSign->tokens[] = new NaverMultiSignTokens();
 
@@ -54,6 +58,10 @@
   $NaverMultiSign->tokens[1]->tokenType = 'TEXT'; 
   // 서명 원문 - 원문 2,800자 까지 입력가능
   $NaverMultiSign->tokens[1]->token = $NavercertService->encrypt("전자서명(복수) 요청 원문 2");
+  // 서명 원문 유형
+  // $NaverMultiSign->tokens[1]->tokenType = 'HASH'; 
+  // 서명 원문 유형이 HASH인 경우, 원문은 SHA-256, Base64 URL Safe No Padding을 사용
+  // $NaverMultiSign->tokens[1]->token = $NavercertService->encrypt($NavercertService->sha256("전자서명(복수) 요청 원문 2"));
 
   // AppToApp 인증요청 여부
   // true - AppToApp 인증방식, false - Talk Message 인증방식
@@ -64,6 +72,7 @@
   // $PassIdentity->deviceOSType = 'IOS';
 
   // AppToApp 방식 이용시, 호출할 URL
+  // "http", "https"등의 웹프로토콜 사용 불가
   // $NaverMultiSign->returnURL = 'navercert://sign';
 
   try {

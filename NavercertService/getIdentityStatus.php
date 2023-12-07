@@ -13,17 +13,17 @@
     include 'common.php';
 
     // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
-    $clientCode = '023060000088';
+    $clientCode = '023090000021';
 
     // 본인인증 요청시 반환된 접수아이디
-    $receiptID = '02309050230600000880000000000032';
+    $receiptID = '02309050230900000210000000000032';
 
     try {
-    $result = $NavercertService->getIdentityStatus($clientCode, $receiptID);
+        $result = $NavercertService->getIdentityStatus($clientCode, $receiptID);
     }
     catch(BarocertException $pe) {
-    $code = $pe->getCode();
-    $message = $pe->getMessage();
+        $code = $pe->getCode();
+        $message = $pe->getMessage();
     }
 ?>
     <body>
@@ -36,22 +36,15 @@
                     <?php
                     if ( isset($code) ) {
                     ?>
-                    <li>Response.code : <?php echo $code ?> </li>
-                    <li>Response.message : <?php echo $message ?></li>
+                        <li>Response.code : <?php echo $code ?> </li>
+                        <li>Response.message : <?php echo $message ?></li>
                     <?php
                     } else {
                     ?>
-                    <li>접수 아이디 (ReceiptID) : <?php echo $result->receiptID ?></li>
-                    <li>이용기관 코드 (ClientCode) : <?php echo $result->clientCode ?></li>
-                    <li>상태 (State) : <?php echo $result->state ?></li>
-                    <li>요청 만료시간 (ExpireIn) : <?php echo $result->expireIn ?></li>
-                    <li>이용기관 명 (CallCenterName) : <?php echo $result->callCenterName ?></li>
-                    <li>이용기관 연락처 (CallCenterNum) : <?php echo $result->callCenterNum ?></li>
-                    <li>복귀 URL (ReturnURL) : <?php echo $result->returnURL ?></li>
-                    <li>서명만료일시 (ExpireDT) : <?php echo $result->expireDT ?></li>
-                    <li>앱스킴 (Scheme) : <?php echo $result->scheme ?></li>
-                    <li>모바일장비 유형 (DeviceOSType) : <?php echo $result->deviceOSType ?></li>
-                    <li>앱사용유무 (AppUseYN) : <?php echo var_dump($result->appUseYN) ?></li>
+                        <li>접수 아이디 (ReceiptID) : <?php echo $result->receiptID ?></li>
+                        <li>이용기관 코드 (ClientCode) : <?php echo $result->clientCode ?></li>
+                        <li>상태 (State) : <?php echo $result->state ?></li>
+                        <li>서명만료일시 (ExpireDT) : <?php echo $result->expireDT ?></li>
                     <?php
                     }
                     ?>

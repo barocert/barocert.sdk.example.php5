@@ -35,7 +35,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>카카오 전자서명 검증(단건)</legend>
+                <legend>카카오 전자서명(단건) 검증</legend>
                 <ul>
 
                 <?php

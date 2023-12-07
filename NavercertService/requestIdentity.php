@@ -14,7 +14,7 @@
   include 'common.php';
 
   // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
-  $clientCode = '023060000088';
+  $clientCode = '023090000021';
 
   // 본인인증 요청정보 객체
   $NaverIdentity = new NaverIdentity();
@@ -40,7 +40,8 @@
   // $NaverIdentity->deviceOSType = 'IOS';
 
   // AppToApp 방식 이용시, 호출할 URL
-  // $NaverIdentity->returnURL = 'navercert://sign';
+  // "http", "https"등의 웹프로토콜 사용 불가
+  // $NaverIdentity->returnURL = 'navercert://identity';
 
   try {
     $result = $NavercertService->requestIdentity($clientCode, $NaverIdentity);

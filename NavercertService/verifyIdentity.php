@@ -16,10 +16,10 @@
   include 'common.php';
 
   // 이용기관코드, 파트너가 등록한 이용기관의 코드 (파트너 사이트에서 확인가능)
-  $clientCode = '023060000088';
+  $clientCode = '023090000021';
 
   // 본인인증 요청시 반환받은 접수아이디
-  $receiptID = '02309050230600000880000000000030';
+  $receiptID = '02309050230900000210000000000030';
 
   try {
     $result = $NavercertService->verifyIdentity($clientCode, $receiptID);
