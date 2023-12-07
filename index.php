@@ -68,6 +68,15 @@
         </ul>
     </fieldset>
 
+    <fieldset class="fieldset1">
+        <legend>Navercert 출금동의 API</legend>
+        <ul>
+            <li><a href="NavercertService/requestCMS.php">RequestCMS</a> - 출금동의 요청</li>
+            <li><a href="NavercertService/getCMSStatus.php">GetCMSStatus</a> - 출금동의 상태확인</li>
+            <li><a href="NavercertService/verifyCMS.php">VerifyCMS</a> - 출금동의 검증</li>
+        </ul>
+    </fieldset>
+
     <br/>
 
     <fieldset class="fieldset1">
