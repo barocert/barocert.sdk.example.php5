@@ -34,7 +34,7 @@
   $NaverSign->expireIn = 1000;
   // 요청 메시지 - 최대 500자
   $NaverSign->reqMessage = $NavercertService->encrypt('전자서명(단건) 요청 메시지');
-    // 서명 원문 유형
+  // 서명 원문 유형
   // TEXT - 일반 텍스트, HASH - HASH 데이터
   $NaverSign->tokenType = 'TEXT';
   // 서명 원문 - 원문 2,800자 까지 입력가능
