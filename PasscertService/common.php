@@ -2,7 +2,7 @@
   /**
   * Passcert API PHP SDK Example
   *
-  * 업데이트 일자 : 2023-12-07
+  * 업데이트 일자 : 2023-12-13
   * 연동기술지원 연락처 : 1600-9854
   * 연동기술지원 이메일 : code@linkhubcorp.com
   *
