@@ -46,7 +46,6 @@
                         <li>이용기관 코드 (ClientCode) : <?php echo $result->clientCode ?></li>
                         <li>접수 아이디 (ReceiptID) : <?php echo $result->receiptID ?></li>
                         <li>상태 (State) : <?php echo $result->state ?></li>
-                        <li>요청 만료시간 (ExpireIn) : <?php echo $result->expireIn ?></li>
                         <li>서명요청일시 (RequestDT) : <?php echo $result->requestDT ?></li>
                         <li>서명완료일시 (CompleteDT) : <?php echo $result->completeDT ?></li>
                         <li>서명만료일시 (ExpireDT) : <?php echo $result->expireDT ?></li>
