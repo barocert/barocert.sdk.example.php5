@@ -45,7 +45,7 @@
   // $NaverSign->token = $NavercertService->encrypt($NavercertService->sha256_base64url('전자서명(단건) 요청 원문'));
 
   // AppToApp 인증요청 여부
-  // true - AppToApp 인증방식, false - Talk Message 인증방식
+  // true - AppToApp 인증방식, false - 푸시(Push) 인증방식
   $NaverSign->appUseYN = false;
 
   // AppToApp 인증방식에서 사용

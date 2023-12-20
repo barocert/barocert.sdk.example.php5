@@ -64,7 +64,7 @@
   // $NaverMultiSign->tokens[1]->token = $NavercertService->encrypt($NavercertService->sha256_base64url("전자서명(복수) 요청 원문 2"));
 
   // AppToApp 인증요청 여부
-  // true - AppToApp 인증방식, false - Talk Message 인증방식
+  // true - AppToApp 인증방식, false - 푸시(Push) 인증방식
   $NaverMultiSign->appUseYN = false;
 
   // AppToApp 인증방식에서 사용

@@ -52,7 +52,7 @@
   $PassCMS->bankWithdraw = $PasscertService->encrypt('1,000,000원'); 
 
   // AppToApp 요청 여부
-  // true - AppToApp 인증방식, false - Push 인증방식
+  // true - AppToApp 인증방식, false - 푸시(Push) 인증방식
   $PassCMS->appUseYN = false; 
   // ApptoApp 인증방식에서 사용
   // 통신사 유형('SKT', 'KT', 'LGU'), 대문자 입력(대소문자 구분)
