@@ -27,9 +27,9 @@
     $PassSign->receiverBirthday = $PasscertService->encrypt('19700101');
 
     // 요청 메시지 제목 - 최대 40자
-    $PassSign->reqTitle = '전자서명증요청 메시지 제목';
+    $PassSign->reqTitle = '전자서명 요청 메시지 제목';
     // 요청 메시지 - 최대 500자
-    $PassSign->reqMessage = $PasscertService->encrypt('간편로그인 요청 메시지');
+    $PassSign->reqMessage = $PasscertService->encrypt('전자서명 요청 메시지');
     // 고객센터 연락처 - 최대 12자
     $PassSign->callCenterNum = '1600-9854';
     // 요청 만료시간 - 최대 1,000(초)까지 입력 가능
