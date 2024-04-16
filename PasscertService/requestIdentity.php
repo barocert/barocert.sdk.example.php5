@@ -65,7 +65,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>패스 본인인증 요청 API JSP Example</legend>
+                <legend>패스 본인인증 요청</legend>
                 <ul>
 
                 <?php

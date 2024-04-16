@@ -31,7 +31,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>네이버 본인인증 상태확인 API JSP Example</legend>
+                <legend>네이버 본인인증 상태확인</legend>
                 <ul>
                     <?php
                     if ( isset($code) ) {

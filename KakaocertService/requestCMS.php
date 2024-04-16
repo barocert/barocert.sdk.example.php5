@@ -66,7 +66,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>카카오 출금동의 요청 API JSP Example</legend>
+                <legend>카카오 출금동의 요청</legend>
                 <ul>
                 <?php
                 if ( isset($result) ) {

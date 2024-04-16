@@ -69,7 +69,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>네이버 전자서명(단건) 요청 API JSP Example</legend>
+                <legend>네이버 전자서명(단건) 요청</legend>
                 <ul>
 
                 <?php
