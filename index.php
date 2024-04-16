@@ -2,11 +2,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" type="text/css" href="./Example.css" media="screen"/>
-    <title>Barocert Service PHP 5.X Example.</title>
+    <title>Barocert PHP Example.</title>
 </head>
 <body>
 <div id="content">
-    <p class="heading1">Barocert Service PHP 5.X Example.</p>
+    <p class="heading1">Barocert PHP Example.</p>
     <br/>
     <fieldset class="fieldset1">
         <legend>Kakaocert 본인인증 API</legend>

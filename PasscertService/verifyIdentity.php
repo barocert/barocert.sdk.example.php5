@@ -2,7 +2,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
-        <title>Barocert Pass Service PHP 5.X Example.</title>
+        <title>Barocert PHP Example</title>
     </head>
 <?php
 
@@ -42,26 +42,26 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>패스 본인인증 검증</legend>
+                <legend>패스 본인인증 검증 API JSP Example</legend>
                 <ul>
                 <?php
                 if ( isset($result) ) {
                 ?>
-                <li>접수 아이디 (ReceiptID) : <?php echo $result->receiptID ?></li>
-                <li>상태 (State) : <?php echo $result->state ?></li>
-                <li>수신자 성명 (ReceiverName) : <?php echo $result->receiverName ?></li>
-                <li>수신자 출생년도 (ReceiverYear) : <?php echo $result->receiverYear ?></li>
-                <li>수신자 출생월일 (ReceiverDay) : <?php echo $result->receiverDay ?></li>
-                <li>수신자 성별 (ReceiverGender) : <?php echo $result->receiverGender ?></li>
-                <li>외국인 여부 (ReceiverForeign) : <?php echo $result->receiverForeign ?></li>
-                <li>수신자 통신사유형 (ReceiverTelcoType) : <?php echo $result->receiverTelcoType ?></li>
-                <li>전자서명 데이터 (SignedData) : <?php echo $result->signedData ?></li>
-                <li>연계정보 (Ci) : <?php echo $result->ci ?></li>
+                  <li>접수 아이디 (ReceiptID) : <?php echo $result->receiptID ?></li>
+                  <li>상태 (State) : <?php echo $result->state ?></li>
+                  <li>수신자 성명 (ReceiverName) : <?php echo $result->receiverName ?></li>
+                  <li>수신자 출생년도 (ReceiverYear) : <?php echo $result->receiverYear ?></li>
+                  <li>수신자 출생월일 (ReceiverDay) : <?php echo $result->receiverDay ?></li>
+                  <li>수신자 성별 (ReceiverGender) : <?php echo $result->receiverGender ?></li>
+                  <li>외국인 여부 (ReceiverForeign) : <?php echo $result->receiverForeign ?></li>
+                  <li>수신자 통신사유형 (ReceiverTelcoType) : <?php echo $result->receiverTelcoType ?></li>
+                  <li>전자서명 데이터 (SignedData) : <?php echo $result->signedData ?></li>
+                  <li>연계정보 (Ci) : <?php echo $result->ci ?></li>
                 <?php
                 } else {
                 ?>
-                <li>Response.code : <?php echo $code ?> </li>
-                <li>Response.message : <?php echo $message ?></li>
+                  <li>Response.code : <?php echo $code ?> </li>
+                  <li>Response.message : <?php echo $message ?></li>
                 <?php
                 }
                 ?>

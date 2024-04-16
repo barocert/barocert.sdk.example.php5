@@ -2,7 +2,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
-        <title>Barocert Naver Service PHP 5.X Example.</title>
+        <title>Barocert PHP Example</title>
     </head>
 <?php
     /*
@@ -31,7 +31,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>네이버 출금동의 상태확인</legend>
+                <legend>네이버 출금동의 상태확인 API JSP Example</legend>
                 <ul>
                     <?php
                     if ( isset($code) ) {

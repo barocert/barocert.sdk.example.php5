@@ -2,7 +2,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
-        <title>Barocert Naver Service PHP 5.X Example.</title>
+        <title>Barocert PHP Example</title>
     </head>
 <?php
 
@@ -88,20 +88,20 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>네이버 전자서명(복수) 요청</legend>
+                <legend>네이버 전자서명(복수) 요청 API JSP Example</legend>
                 <ul>
 
                 <?php
                 if ( isset($result) ) {
                 ?>
-                <li>접수아이디 (TeceiptID) : <?php echo $result->receiptID ?></li>
-                <li>앱스킴 (Scheme) : <?php echo $result->scheme ?></li>
-                <li>앱다운로드URL (marketUrl) : <?php echo $result->marketUrl ?></li>
+                  <li>접수아이디 (TeceiptID) : <?php echo $result->receiptID ?></li>
+                  <li>앱스킴 (Scheme) : <?php echo $result->scheme ?></li>
+                  <li>앱다운로드URL (marketUrl) : <?php echo $result->marketUrl ?></li>
                 <?php
                 } else {
                 ?>
-                <li>Response.code : <?php echo $code ?> </li>
-                <li>Response.message : <?php echo $message ?></li>
+                  <li>Response.code : <?php echo $code ?> </li>
+                  <li>Response.message : <?php echo $message ?></li>
                 <?php
                 }
                 ?>

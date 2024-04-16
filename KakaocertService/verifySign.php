@@ -2,7 +2,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="stylesheet" type="text/css" href="../Example.css" media="screen" />
-        <title>Barocert Kakao Service PHP 5.X Example.</title>
+        <title>Barocert PHP Example</title>
     </head>
 <?php
 
@@ -35,21 +35,25 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>카카오 전자서명(단건) 검증</legend>
+                <legend>카카오 전자서명(단건) 검증 API JSP Example</legend>
                 <ul>
 
                 <?php
                 if ( isset($result) ) {
                 ?>
-                <li>접수 아이디 (ReceiptID) : <?php echo $result->receiptID ?></li>
-                
-                <li>전자서명 데이터 전문 (SignedData) : <?php echo $result->signedData ?></li>
-                <li>연계정보 (Ci) : <?php echo $result->ci ?></li>
+                  <li>접수 아이디 (ReceiptID) : <?php echo $result->receiptID ?></li>
+                  <li>상태 (State) : <?php echo $result->state ?></li>
+                  <li>전자서명 데이터 전문 (SignedData) : <?php echo $result->signedData ?></li>
+                  <li>연계정보 (Ci) : <?php echo $result->ci ?></li>
+                  <li>수신자 성명 (ReceiverName) : <?php echo $result->receiverName ?></li>
+                  <li>수신자 출생년도 (ReceiverYear) : <?php echo $result->receiverYear ?></li>
+                  <li>수신자 출생월일 (ReceiverDay) : <?php echo $result->receiverDay ?></li>
+                  <li>수신자 휴대폰번호 (ReceiverHP) : <?php echo $result->receiverHP ?></li>
                 <?php
                 } else {
                 ?>
-                <li>Response.code : <?php echo $code ?> </li>
-                <li>Response.message : <?php echo $message ?></li>
+                  <li>Response.code : <?php echo $code ?> </li>
+                  <li>Response.message : <?php echo $message ?></li>
                 <?php
                 }
                 ?>

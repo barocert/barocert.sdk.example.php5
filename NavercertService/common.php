@@ -1,11 +1,23 @@
 <?php
   /**
-  * Navercert API PHP SDK Example
+  * Barocert NAVER API Java SDK JSP Example
   *
-  * 업데이트 일자 : 2023-12-13
+  * 업데이트 일자 : 2024-04-16
   * 연동기술지원 연락처 : 1600-9854
   * 연동기술지원 이메일 : code@linkhubcorp.com
+  *         
+  * <테스트 연동개발 준비사항>
+  *   1) API Key 변경 (연동신청 시 메일로 전달된 정보)
+  *       - LinkID : 링크허브에서 발급한 링크아이디
+  *       - SecretKey : 링크허브에서 발급한 비밀키
+  *   2) ClientCode 변경 (연동신청 시 메일로 전달된 정보)
+  *       - ClientCode : 이용기관코드 (파트너 사이트에서 확인가능)
+  *   3) SDK 환경설정 필수 옵션 설정
+  *       - IPRestrictOnOff : 인증토큰 IP 검증 설정, true-사용, false-미사용, (기본값:true)
+  *       - UseStaticIP : 통신 IP 고정, true-사용, false-미사용, (기본값:false)
   *
+  * This module uses curl and openssl for HTTPS Request. So related modules must
+  * be installed and enabled.
   */
 
     require_once '../Barocert/Navercert.php';
@@ -22,10 +34,10 @@
 
     $NavercertService = new NavercertService($LinkID, $SecretKey);
 
-    // 인증토큰에 대한 IP제한기능 사용여부, true-사용, false-미사용, 기본값(true)
+    // 인증토큰 IP 검증 설정, true-사용, false-미사용, (기본값:true)
     $NavercertService->IPRestrictOnOff(true);
 
-    // 네이버써트 API 서비스 고정 IP 사용여부, true-사용, false-미사용, 기본값(false)
+    // 네통신 IP 고정, true-사용, false-미사용, (기본값:false)
     $NavercertService->UseStaticIP(false);
 
 ?>
