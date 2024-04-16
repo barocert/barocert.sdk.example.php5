@@ -10,9 +10,7 @@
   *   1) API Key 변경 (연동신청 시 메일로 전달된 정보)
   *       - LinkID : 링크허브에서 발급한 링크아이디
   *       - SecretKey : 링크허브에서 발급한 비밀키
-  *   2) ClientCode 변경 (연동신청 시 메일로 전달된 정보)
-  *       - ClientCode : 이용기관코드 (파트너 사이트에서 확인가능)
-  *   3) SDK 환경설정 필수 옵션 설정
+  *   2) SDK 환경설정 필수 옵션 설정
   *       - IPRestrictOnOff : 인증토큰 IP 검증 설정, true-사용, false-미사용, (기본값:true)
   *       - UseStaticIP : 통신 IP 고정, true-사용, false-미사용, (기본값:false)
   *
