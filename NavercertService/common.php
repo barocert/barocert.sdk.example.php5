@@ -1,6 +1,6 @@
 <?php
   /**
-  * Barocert NAVER API Java SDK JSP Example
+  * Barocert NAVER API PHP SDK Example
   *
   * 업데이트 일자 : 2024-04-16
   * 연동기술지원 연락처 : 1600-9854
