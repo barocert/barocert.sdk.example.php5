@@ -42,7 +42,7 @@
                 if ( isset($result) ) {
                 ?>
                   <li>접수 아이디 (ReceiptID) : <?php echo $result->receiptID ?></li>
-                
+                  <li>상태 (State) : <?php echo $result->state ?></li>
 
                 <?php
                   for ($i = 0; $i < Count($result->multiSignedData); $i++) {
