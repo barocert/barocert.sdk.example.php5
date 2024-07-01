@@ -42,16 +42,23 @@
   $KakaoMultiSign->tokens[0]->signTitle = "전자서명(복수) 서명 요청 제목 1";
   // 서명 원문 - 원문 2,800자 까지 입력가능
   $KakaoMultiSign->tokens[0]->token = $KakaocertService->encrypt("전자서명(복수) 요청 원문 1");
+  // 서명 원문 유형이 HASH인 경우, 원문은 SHA-256, Base64 URL Safe No Padding을 사용
+  // $KakaoMultiSign->token[0] = $KakaocertService->encrypt($KakaocertService->sha256_base64url_file($target));
+
 
   $KakaoMultiSign->tokens[] = new KakaoMultiSignTokens();
   // 서명 요청 제목 - 최대 40자
   $KakaoMultiSign->tokens[1]->signTitle = "전자서명(복수) 서명 요청 제목 2";
   // 서명 원문 - 원문 2,800자 까지 입력가능
   $KakaoMultiSign->tokens[1]->token = $KakaocertService->encrypt("전자서명(복수) 요청 원문 2");
+  // 서명 원문 유형이 HASH인 경우, 원문은 SHA-256, Base64 URL Safe No Padding을 사용
+  // $KakaoMultiSign->token[1] = $KakaocertService->encrypt($KakaocertService->sha256_base64url_file($target));
+
 
   // 서명 원문 유형
-  // TEXT - 일반 텍스트, HASH - HASH 데이터
-  $KakaoMultiSign->tokenType = 'TEXT'; // TEXT, HASH
+  // TEXT - 일반 텍스트, HASH - HASH 데이터, PDF - PDF 데이터
+  $KakaoMultiSign->tokenType = 'TEXT'; // TEXT, HASH, PDF
+  // $KakaoSign->tokenType = 'PDF';
 
   // AppToApp 인증요청 여부
   // true - AppToApp 인증방식, false - Talk Message 인증방식
