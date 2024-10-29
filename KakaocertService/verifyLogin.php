@@ -48,6 +48,7 @@
                   <li>수신자 출생년도 (ReceiverYear) : <?php echo $result->receiverYear ?></li>
                   <li>수신자 출생월일 (ReceiverDay) : <?php echo $result->receiverDay ?></li>
                   <li>수신자 휴대폰번호 (ReceiverHP) : <?php echo $result->receiverHP ?></li>
+                  <li>수신자 성별 (ReceiverGender) : <?php echo $result->receiverGender ?></li>
                 <?php
                 } else {
                 ?>

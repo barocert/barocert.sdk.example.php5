@@ -2,7 +2,7 @@
   /**
   * Barocert KAKAO API PHP SDK Example
   *
-  * 업데이트 일자 : 2024-04-16
+  * 업데이트 일자 : 2024-10-28
   * 연동기술지원 연락처 : 1600-9854
   * 연동기술지원 이메일 : code@linkhubcorp.com
   *         
