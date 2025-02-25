@@ -49,6 +49,8 @@
                   <li>수신자 출생월일 (ReceiverDay) : <?php echo $result->receiverDay ?></li>
                   <li>수신자 휴대폰번호 (ReceiverHP) : <?php echo $result->receiverHP ?></li>
                   <li>수신자 성별 (ReceiverGender) : <?php echo $result->receiverGender ?></li>
+                  <li>외국인 여부 (ReceiverForeign) : <?php echo $result->receiverForeign ?></li>
+                  <li>통신사 유형 (ReceiverTelcoType) : <?php echo $result->receiverTelcoType ?></li>
                 <?php
                 } else {
                 ?>
